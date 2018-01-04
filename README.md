@@ -1,5 +1,7 @@
 # Qwant Feather Icons
 
+![Icons List](https://raw.githubusercontent.com/QwantResearch/qwant-feather-icons/master/examples/demo.png)
+
 ## What is this ?
 
 This is a collection of simply open source icons. Each icon is designed on a 24x24 grid for Qwant website.
