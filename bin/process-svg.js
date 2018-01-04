@@ -31,7 +31,7 @@ function optimize(svg) {
     plugins: [
       { convertShapeToPath: false },
       { mergePaths: false },
-      { removeAttrs: { attrs: '(fill|stroke.*)' } },
+      // { removeAttrs: { attrs: '(fill|stroke.*)' } },
       { removeTitle: true },
     ],
   });

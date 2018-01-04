@@ -7,9 +7,8 @@ jest.mock('../../dist/icons.json', () => ({
   icon2: '<circle cx="12" cy="12" r="11" />',
 }));
 
-test('replaces [data-feather] elements with SVG markup', () => {
-  document.body.innerHTML =
-    '<i data-feather="icon1"></i><span data-feather="icon2"></i>';
+test('replaces [name] elements with SVG markup', () => {
+  document.body.innerHTML = '<i name="icon1"></i><span name="icon2"></i>';
   expect(document.body.innerHTML).toMatchSnapshot();
   replace();
   expect(document.body.innerHTML).toMatchSnapshot();
@@ -17,7 +16,7 @@ test('replaces [data-feather] elements with SVG markup', () => {
 
 test('copies placeholder element attributes to <svg> tag', () => {
   document.body.innerHTML =
-    '<i data-feather="icon1" id="test" class="foo bar" stroke-width="1"></i>';
+    '<i name="icon1" id="test" class="foo bar" stroke-width="1"></i>';
   expect(document.body.innerHTML).toMatchSnapshot();
   replace();
   expect(document.body.innerHTML).toMatchSnapshot();
@@ -25,7 +24,7 @@ test('copies placeholder element attributes to <svg> tag', () => {
 
 test('sets attributes passed as parameters', () => {
   document.body.innerHTML =
-    '<i data-feather="icon1" id="test" class="foo bar" stroke-width="1"></i>';
+    '<i name="icon1" id="test" class="foo bar" stroke-width="1"></i>';
   expect(document.body.innerHTML).toMatchSnapshot();
   replace({ class: 'foo bar hello', 'stroke-width': 1.5, color: 'salmon' });
   expect(document.body.innerHTML).toMatchSnapshot();
