@@ -1,4 +1,5 @@
 {
+  "logo": ["qwant"],
   "3col-view-color": ["all-color", "3col-color"],
   "3col-view-mono": ["all-mono", "3col-mono"],
   "chevron-down": ["arrow-down"],
